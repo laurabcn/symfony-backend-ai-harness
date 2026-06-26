@@ -2,7 +2,7 @@
 
 ```mermaid
 flowchart LR
-  atomize[Atomize epic]
+  atomize[atomize-feature]
   spec[create-feature-spec]
   start[start-task]
   impl[Implement]
@@ -16,6 +16,7 @@ flowchart LR
 
 | Stage | Skill | Output |
 |-------|-------|--------|
+| Atomize | atomize-feature | Work-breakdown plan (packages + build order) |
 | Plan | create-feature-spec | `docs/specs/<slug>-spec.md` |
 | Bootstrap | start-task | Branch + implementation brief |
 | Build | (manual) | Code + tests |
@@ -30,6 +31,9 @@ flowchart LR
 | Production bug | fix-bug |
 | Flaky CI test | fix-flaky-test |
 | PR feedback | triage-pr-comments |
+| Domain code moved | sync-domain-models |
+| New API endpoint | create-endpoint |
+| Context debt / drift | audit-conventions |
 
 ## Design principles
 

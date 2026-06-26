@@ -12,29 +12,35 @@ A documented AI harness that accelerates:
 - Code review against DDD conventions
 - PR validation and description
 - Bug diagnosis and flaky test fixes
+- Endpoint scaffolding and convention audits
+- Domain reference maintenance
 
-The [private implementation](https://github.com/laurariera) powers day-to-day development. This repo shows **structure and decisions**, not copy-paste-ready prompts.
+The [private implementation](https://github.com/laurabcn/symfony-ai-vault) powers day-to-day development. This repo shows **structure and decisions**, not copy-paste-ready prompts.
 
 ## Pipeline
 
 See [docs/architecture/pipeline.md](docs/architecture/pipeline.md).
 
 ```
-atomize → create-feature-spec → start-task → implement → symfony-code-review → validate-pr → pr-description
+atomize-feature → create-feature-spec → start-task → implement → symfony-code-review → validate-pr → pr-description
 ```
 
 ## Skill catalog (preview excerpts)
 
 | Skill | Category | Preview |
 |-------|----------|---------|
+| atomize-feature | Planning | [preview](preview/.cursor/skills/atomize-feature/SKILL.md) |
+| create-feature-spec | Workflow | [preview](preview/.cursor/skills/create-feature-spec/SKILL.md) |
+| start-task | Workflow | [preview](preview/.cursor/skills/start-task/SKILL.md) |
 | symfony-code-review | Quality | [preview](preview/.cursor/skills/symfony-code-review/SKILL.md) |
 | validate-pr | Workflow | [preview](preview/.cursor/skills/validate-pr/SKILL.md) |
 | pr-description | Workflow | [preview](preview/.cursor/skills/pr-description/SKILL.md) |
-| create-feature-spec | Workflow | [preview](preview/.cursor/skills/create-feature-spec/SKILL.md) |
-| start-task | Workflow | [preview](preview/.cursor/skills/start-task/SKILL.md) |
 | fix-bug | Incident | [preview](preview/.cursor/skills/fix-bug/SKILL.md) |
 | fix-flaky-test | Incident | [preview](preview/.cursor/skills/fix-flaky-test/SKILL.md) |
 | triage-pr-comments | Workflow | [preview](preview/.cursor/skills/triage-pr-comments/SKILL.md) |
+| sync-domain-models | Maintenance | [preview](preview/.cursor/skills/sync-domain-models/SKILL.md) |
+| create-endpoint | Scaffolding | [preview](preview/.cursor/skills/create-endpoint/SKILL.md) |
+| audit-conventions | Quality | [preview](preview/.cursor/skills/audit-conventions/SKILL.md) |
 | domain-models-reference | Reference | [preview](preview/.cursor/skills/domain-models-reference/SKILL.md) |
 
 Agent: [symfony-code-reviewer](preview/.cursor/agents/symfony-code-reviewer.md) (excerpt)

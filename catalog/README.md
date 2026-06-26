@@ -2,33 +2,32 @@
 
 One-page summaries. Full operational prompts are private; see `preview/` for watermarked excerpts.
 
-## symfony-code-review
+## atomize-feature
 
-**Category:** Quality check  
-**Problem:** Inconsistent manual reviews miss DDD violations and test gaps.  
-**Pattern:** Thin dispatcher → `symfony-code-reviewer` subagent (3 diff scopes).  
-**Output:** Verdict + Blocking + Tests + Conventions report.  
-**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/symfony-code-review/SKILL.md)
+**Category:** Planning  
+**Problem:** Epics too large to implement or review as one unit.  
+**Pattern:** Understand → decompose → adversarial critique → synthesize work-packages.  
+**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/atomize-feature/SKILL.md)
 
-## create-feature-spec
+## sync-domain-models
 
-**Category:** Workflow  
-**Problem:** Design decisions live in issue comments, lost at implementation time.  
-**Pattern:** Epic issues → `docs/specs/<slug>-spec.md` with Invariants vs Approach per task.  
-**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/create-feature-spec/SKILL.md) · [ADR 002](../docs/adrs/002-invariants-vs-approach-specs.md)
+**Category:** Maintenance  
+**Problem:** domain-models-reference drifts from code.  
+**Pattern:** git diff since last skill update → rewrite only affected sections.  
+**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/sync-domain-models/SKILL.md)
 
-## validate-pr
+## create-endpoint
 
-**Category:** Workflow  
-**Problem:** PRs merge without verifying all acceptance criteria.  
-**Pattern:** Diff vs issue + optional spec file; invariants are hard gates, approach is flexible.  
-**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/validate-pr/SKILL.md)
+**Category:** Scaffolding  
+**Problem:** New endpoints need consistent DDD/CQRS wiring across layers.  
+**Pattern:** Query/Command + Handler + Controller + route + test skeleton.  
+**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/create-endpoint/SKILL.md)
 
-## fix-flaky-test
+## audit-conventions
 
-**Category:** Incident  
-**Problem:** Intermittent CI failures erode trust; masking makes it worse.  
-**Pattern:** Reproduce loops → root cause → 15x stability proof before done.  
-**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/fix-flaky-test/SKILL.md)
+**Category:** Quality at scale  
+**Problem:** Convention drift accumulates per bounded context.  
+**Pattern:** Per-agreement scan → remediation plan with Invariants/Approach packages.  
+**Preview:** [SKILL.md excerpt](../preview/.cursor/skills/audit-conventions/SKILL.md)
 
 See [README](../README.md) for the full table.
